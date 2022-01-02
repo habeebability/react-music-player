@@ -1,0 +1,15 @@
+.main-body-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.songs-div {
+    display: flex;
+    align-items: center;
+}
+
+.icons-grid {
+    display: flex;
+}
