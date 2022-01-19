@@ -11,7 +11,10 @@
 
 @media screen and (min-width:500px) {
     .SideNav-container {
+        /* flex: 1; */
         display: initial;
+        flex-basis: 20%;
+
     }
     
 }

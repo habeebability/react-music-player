@@ -1,7 +1,7 @@
 import React from 'react';
 import MainBodyNav from './MainBodyNav';
-import SongList from './SongList';
 import './MainBody.css';
+import SongList from './SongList';
 
 function MainBody() {
     return (

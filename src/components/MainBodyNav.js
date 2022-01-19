@@ -7,16 +7,16 @@ import { BsFillGridFill } from 'react-icons/bs';
 
 function MainBodyNav() {
   return (
-    <IconContext.Provider value={{color: "green", }} >
+    <IconContext.Provider value={{color: "white"  }} >
       <div className="main-body-nav">
         <div className="songs-div">
-          <h1>Songs</h1>
-          <FaRegPlayCircle className="mainBodyNavIcon" />
-          <BiShuffle className="mainBodyNavIcon" />
+          <h1 className='text-2xl'>Songs</h1>
+          <FaRegPlayCircle className="mainBodyNavIcon mx-2" style={{backgroundColor: 'blue'}} />
+          <BiShuffle className="mainBodyNavIcon mx-2" />
         </div>
         <div className="icons-grid">
-          <BsFillGridFill className="mainBodyNavIcon" />
-          <BiListUl className="mainBodyNavIcon" />
+          <BsFillGridFill className="mainBodyNavIcon mx-2" />
+          <BiListUl className="mainBodyNavIcon mx-2" />
         </div>
       </div>
     </IconContext.Provider>

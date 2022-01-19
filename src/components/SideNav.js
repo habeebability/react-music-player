@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './SideNav.css';
 import SideNavOption from './SideNavOption';
 
@@ -11,9 +11,12 @@ import { BsFillMusicPlayerFill } from 'react-icons/bs'
 
 
 function SideNav() {
+    
+
     return (
-        <div className='SideNav-container'>
+        <ul className='SideNav-container'>
             <h2 className='side-nav-title'>Library</h2>
+            
             {/* <h3><FaMusic/> Songs</h3> */}
             <SideNavOption active Icon={FaMusic} title="Songs"/>
             <SideNavOption Icon={FaClipboardList} title="Album"/>
@@ -32,7 +35,7 @@ function SideNav() {
 
 
             
-        </div>
+        </ul>
     )
 }
 
