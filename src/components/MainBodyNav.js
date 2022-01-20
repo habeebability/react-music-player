@@ -11,7 +11,7 @@ function MainBodyNav() {
       <div className="main-body-nav">
         <div className="songs-div">
           <h1 className='text-2xl'>Songs</h1>
-          <FaRegPlayCircle className="mainBodyNavIcon mx-2" style={{backgroundColor: 'blue'}} />
+          <FaRegPlayCircle className="mainBodyNavIcon mx-2" style={{backgroundColor: '#38A1FD', borderRadius: '25px'}} />
           <BiShuffle className="mainBodyNavIcon mx-2" />
         </div>
         <div className="icons-grid">

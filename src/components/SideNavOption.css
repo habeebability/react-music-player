@@ -15,13 +15,13 @@
 
 .side-nav-option:hover {
     transition: color 100ms ease-out;
-    border-left: 3px solid blue;
-    color: blue;
+    border-left: 3px solid #38A1FD;
+    color: #38A1FD;
 }
 
 
 .side-nav-option--active{
-    color: blue;
+    color: #38A1FD;
 }
 
 

@@ -48,7 +48,7 @@ function SongList() {
                  return <li key={song.title}>
                      <h4>title: {song.title}</h4>
                      <h4>artist {song.artist}</h4>
-                     <audio src={song.audioSrc} controls></audio>
+                     <audio style={{background: 'red'}} src={song.audioSrc} controls></audio>
 
                  </li>
               })

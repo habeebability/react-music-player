@@ -1,5 +1,5 @@
 import React from "react";
-
+import SongGrid from '../components/SongGrid'
 import NoBeMe from '../assets/NoBeMe.mp3';
 import Mama from '../assets/Mama.mp3';
 import Heya from '../assets/Heya.mp3';
@@ -85,7 +85,16 @@ function SongList() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
-                          <img className="h-10 w-10 rounded-full" src={song.image} alt="" />
+                          <img className="h-10 w-10 rounded-full" src={song.image} alt="" onClick={
+                            ()=>{
+                              let aud = document.createElement('audio');
+                              aud.setAttribute('src', song.audioSrc)
+                              aud.setAttribute('controls', 'controls')
+                              aud.setAttribute('autoplay', 'autoplay')
+                              // document.body.appendChild(aud);
+
+                            }
+                          }/>
                         </div>
                         <div className="ml-4">
                           <div className="text-sm font-medium text-white">{song.title}</div>
@@ -111,6 +120,7 @@ function SongList() {
                 ))}
               </tbody>
             </table>
+            {/* <SongGrid/> */}
           </div>
         </div>
       </div>
