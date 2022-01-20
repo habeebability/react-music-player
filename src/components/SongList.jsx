@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import SongGrid from '../components/SongGrid'
 import NoBeMe from '../assets/NoBeMe.mp3';
 import Mama from '../assets/Mama.mp3';
@@ -42,7 +42,20 @@ const songs = [
     image: avatar
   },
 ];
+const checkPlaying = (playing, aud, val)=>{
+  if(playing === true){
+    aud.remove(val);
+  }
+  else {
+    aud.add(val)
+  }
+}
+
+
 function SongList() {
+
+  const [playing, setPlaying] = useState(false);
+  
   return (
     <div className="flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -81,17 +94,36 @@ function SongList() {
               </thead>
               <tbody className="bg-black divide-y divide-gray-200 ">
                 {songs.map((song) => (
-                  <tr key={song.title}>
+                  <tr key={song.title} className="hover:bg-gray-300 cursor-pointer"
+                  onClick={
+                    ()=>{
+                      let aud;
+                      if(playing){
+                        setPlaying(true)
+                      }
+                      else {
+                        aud = document.createElement('audio');
+                      aud.setAttribute('src', song.audioSrc)
+                      aud.setAttribute('controls', 'controls')
+                      aud.setAttribute('autoplay', 'autoplay')
+                      document.body.appendChild(aud);
+
+                      }
+                      
+
+                    }
+                  }
+                  >
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
-                          <img className="h-10 w-10 rounded-full" src={song.image} alt="" onClick={
+                          <img className="h-10 w-10 rounded-full cursor-pointer" src={song.image} alt="" onClick={
                             ()=>{
                               let aud = document.createElement('audio');
                               aud.setAttribute('src', song.audioSrc)
                               aud.setAttribute('controls', 'controls')
                               aud.setAttribute('autoplay', 'autoplay')
-                              // document.body.appendChild(aud);
+                              document.body.appendChild(aud);
 
                             }
                           }/>
